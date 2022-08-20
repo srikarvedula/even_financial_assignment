@@ -9,7 +9,7 @@ The next file main.py is a Python script to transfer the data from the gzip file
 
 
 create table offers(
-	lead_uuid	   varchar(200)
+lead_uuid	   varchar(200)
 ,offer_id			int
 ,apr			decimal(10, 5)
 ,lender_id			int
@@ -18,7 +18,7 @@ create table offers(
 
 
 create table leads(
-	lead_uuid  varchar(200),
+lead_uuid  varchar(200),
 requested	decimal(5, 2),
 loan_purpose	varchar(200),
 credit	varchar(200),
@@ -32,16 +32,15 @@ clicked_at	datetime);
 
 
 
-create table results_clicked(
-   ...> model_id VARCHAR(200),
-   ...> process_time DATETIME,
-   ...> request_amt DECIMAL(5,2),
-   ...> annual_income DECIMAL(5,2),
-   ...> apr DECIMAL(5,2),
-   ...> credit_type VARCHAR(200),
-   ...> loan_type VARCHAR(200),
-   ...> clicked VARCHAR(200))
-   ...> ;
+create table results_clicked(model_id VARCHAR(200),
+process_time DATETIME,
+request_amt DECIMAL(5,2),
+annual_income DECIMAL(5,2),
+apr DECIMAL(5,2),
+credit_type VARCHAR(200),
+loan_type VARCHAR(200),
+clicked VARCHAR(200))
+;
 
 
 The build_model.ipynb is used for data analysis, features engineering, building models and validating/testing the models. From here, the models are then stored as pickles files to be used for deployment. First step of this notebook is extracting the data from the tables and performing merge/join to combine the tables. Then, the next step was doing features engineering to translate the table and the output suitbale for model building. When building the model, I performed GridSearchCV to find the best set of hyperparameters to use for LogisticRegression models. I used two sets of hyperparameters for to have 2 models and then stored those two models as pickle files.
