@@ -1,5 +1,10 @@
 # even_financial_assignment
 
+pip install:
+pyarrow
+flask
+
+
 The first step is to create install sqlite3 and then to create the database called even_finaincial.db where all the tables will be created. There are 4 tables to create: offers, leads, clicks and results_clicked. offers, leads, click are the first 3 tables where the data will be stored from: 
 ds_leads.parquet.gzip
 ds_clicks.parquet.gzip
