@@ -52,3 +52,19 @@ The build_model.ipynb is used for data analysis, features engineering, building 
 
 
 The app.py is used to deploy the model artefacts in the Flask application.It is a web app that produces model predictions upon receiving a POST request. index.html provides the UI template where you pass the values in the form. The model endpoint is also accepted and the batch predicted results are then stored to the results_clicked table in the database. 
+
+
+
+Output Result:
+sqlite> select * from results_clicked;
+12345_logistic_regr_1|20220819153519|1890|138000|191|fair|debt_consolidation|Not clicked
+67890_logistic_regr_2|20220819153600|1890|34000|131|fair|taxes|Clicked
+67890_logistic_regr_2|20220820200740|5000|1250000|2|excellent|home_improvement|Clicked
+12345_logistic_regr_1|20220820200841|25000|68000|2|poor|business|Clicked
+12345_logistic_regr_1|20220820200938|75000|175000|6|fair|medical_dental|Clicked
+12345_logistic_regr_1|20220820201035|75000|134000|159|fair|debt_consolidation|Not clicked
+12345_logistic_regr_1|20220821223326|3000|138000|191|poor|credit_card_refi|Not clicked
+12345_logistic_regr_1|20220821223410|1890|240000|123|excellent|vacation|Clicked
+12345_logistic_regr_1|20220821224840|3000|138000|159|fair|debt_consolidation|Not clicked
+12345_logistic_regr_1|20220821225003|3000|138000|191|fair|debt_consolidation|Not clicked
+12345_logistic_regr_1|20220821225017|5000|178564|2|excellent|wedding|Clicked
